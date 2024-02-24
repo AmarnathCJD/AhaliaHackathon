@@ -1,6 +1,6 @@
 package main
 
-const MONGODB_URI = "mongodb+srv://vwaste:vwaste@cluster0.1vyhuye.mongodb.net/?retryWrites=true&w=majority"
+const MONGODB_URI = "mongodb+srv://vwaste:vwaste@cluster0.1vyfegeeee.mongodb.net/?retryWrites=true&w=majority"
 
 type Order struct {
 	ID        int    `json:"id,omitempty"`
