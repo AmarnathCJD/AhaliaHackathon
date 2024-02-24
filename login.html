@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VWaste - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="flex min-h-full flex-col justify-center px-8 py-13 lg:px-9">
+      <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+        <img
+          class="mx-auto h-45 w-auto"
+          src="https://envs.sh/Flj.png"
+          alt="Your Company"
+        />
+        <h2
+          class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900"
+        >
+          Sign in to your account
+        </h2>
+      </div>
+
+      <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        <div class="space-y-6" action="#" method="POST">
+          <div>
+            <label
+              for="username"
+              class="block text-sm font-medium leading-6 text-gray-900"
+              >Username</label
+            >
+            <div class="mt-2">
+              <input
+                  id="username"
+                  name="username"
+                  type="username"
+                  autocomplete="username"
+                  required
+                  class="block w-full rounded-md border-0 py-1.5 pl-2 pr-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+          </div>
+          
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between">
+              <label
+                for="password"
+                class="block text-sm font-medium leading-6 text-gray-900"
+                >Password</label
+              >
+              <div class="text-sm">
+                <a
+                  href="#"
+                  class="font-semibold text-indigo-600 hover:text-indigo-500"
+                  >Forgot password?</a
+                >
+              </div>
+            </div>
+            <div class="mt-2">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                required
+                class="block w-full rounded-md border-0 py-1.5 pl-2 pr-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              id="submit"
+              class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Sign in
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-10 text-center text-sm text-gray-500">
+          <a
+            href="newuser.html"
+            class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+            >New User?</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      $("#submit").click(function () {
+        var username = $("#username").val();
+        var password = $("#password").val();
+
+        $.ajax({
+          url: "http://192.168.137.11:8080/api/login",
+          type: "POST",
+          data: {
+            username: username,
+            password: password,
+          },
+          success: function (result) {
+            Swal.fire({
+              title: "Logged in successfully!",
+              text: "Logged in as " + username,
+              icon: "success",
+            });
+            
+            document.cookie = "username=" + username;
+            document.cookie = "access_token=" + result.token;
+
+            setTimeout(function () {
+              window.location.href = "dash.html";
+            }, 100);
+          },
+          error: function (result) {
+            Swal.fire({
+              title: "Error!",
+              text: "Invalid username or password",
+              icon: "error",
+            });
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <!-- Favicons -->
+    <link rel="icon" href="https://envs.sh/FlU.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+</head>
+
+<body class="font-['Open_Sans']">
+    <header>
+        <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+            <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+                <a href="https://flowbite.com" class="flex items-center">
+                    <i
+                        class="fa-solid fa-dumpster-fire text-3xl text-primary-700 dark:text-primary-300 mr-2 bg-primary-100 dark:bg-primary-700 p-0 rounded-lg"></i>
+                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">V-Waste</span>
+                </a>
+                <div class="flex items-center lg:order-2">
+                    <div id="login-state"></div>
+                    <button data-collapse-toggle="mobile-menu-2" type="button"
+                        class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="mobile-menu-2" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                    <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Company</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Marketplace</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Features</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Team</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="min-h-full">
+        <header class="bg-white shadow">
+            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 flex justify-between items-center">
+                <h1 class="text-3xl font-bold tracking-tight text-blue-900 font-serif">
+                    V-Waste <span class="text-base font-semibold text-gray-600">The Food Waste Management System</span>
+                </h1>
+                <span class="text-lg font-bold text-gray-600 dark:text-gray-400" id="login-state-2"></span>
+            </div>
+        </header>
+
+        <main>
+            <div class="mx-auto max-w-4xl py-6 px-6 sm:px-6 lg:px-8">
+                <div class="max-w-lg mx-auto">
+                    <div class="flex items-center justify-between" id="nav-b">
+                        <button disabled id="place-order"
+                            class="px-6 py-2 text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-800 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 opacity-50 cursor-not-allowed">
+                            Place Order
+                        </button>
+                        <button id="add-entry"
+                            class="px-6 py-2 ml-4 text-sm font-medium text-white bg-red-500 hover:bg-red-600 dark:bg-green-700 dark:hover:bg-green-800 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <i class="fa-solid fa-plus"></i> Add Entry
+                        </button>
+                        <button id="view-orders"
+                            class="px-6 py-2 ml-4 text-sm font-medium text-white bg-green-500 hover:bg-green-600 dark:bg-green-700 dark:hover:bg-green-800 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <i class="fa-solid fa-street-view"></i> View Orders
+                        </button>
+                        <button id="btn-nan" onclick="goBack()" class="hidden px-4 py-2 ml-4 text-sm font-medium text-white bg-red-500 hover:bg-red-600 dark:bg-red-700 dark:hover:bg-red-800 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-red-500">Go Back</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div id="main-div" class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 px-6">
+        <div class="max-w-lg mx-auto">
+            <div class="flex">
+                <label for="search-dropdown"
+                    class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search Query</label>
+                <button id="dropdown-button" data-dropdown-toggle="dropdown"
+                    class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
+                    type="button">
+                    All categories
+                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 4 4 4-4" />
+                    </svg>
+                </button>
+                <div id="dropdown"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
+                        <li>
+                            <button type="button"
+                                class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                Restaurants
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button"
+                                class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                Shopkeepers
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button"
+                                class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                FreeFood
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative w-full">
+                    <input type="search" id="search-input"
+                        class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+                        placeholder="Search Restaurants, Shops..." required />
+                    <button type="submit" id="search-button"
+                        class="absolute top-0 end-0 p-2.5 px-4 text-sm font-medium h-full text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                        <span class="sr-only">Search</span>
+                    </button>
+                </div>
+
+
+            </div>
+            <div class="flex items-center">
+                <div class="flex flex-col w-full mt-6 space-y-6">
+                    <div class="flex items center justify-between">
+                        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Search Results</h2>
+                        <button id="show-all" class="text-sm font-medium text-primary-700 dark:text-primary-300">Show
+                            all</button>
+                    </div>
+                    <div class="flex flex-col space-y-6" id="search-results">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+    <script>
+        var notyf = new Notyf({
+            "ripple": true,
+            "duration": 3000,
+        });
+        notyf.success({
+            message: "Welcome to V-Waste",
+        });
+        const userType = "user";
+        var username, orderee;
+        $(document).ready(function () {
+            const cookie = document.cookie;
+            const accessToken = cookie
+                .split(";")
+                .find((c) => c.includes("access_token"));
+            const loginState = document.getElementById("login-state");
+
+            var isLoggedIn = false;
+            if (accessToken) {
+                isLoggedIn = true;
+                console.log("Logged in");
+                username = cookie.split(";").find((c) => c.includes("username")).split("=")[1];
+                document.getElementById("login-state-2").innerHTML = "Welcome, " + cookie.split(";").find((c) => c.includes("username")).split("=")[1];
+            }
+
+            if (isLoggedIn) {
+                loginState.innerHTML = `
+            <button id="log-out" href="#" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log out</button>
+          `;
+            } else {
+                loginState.innerHTML = `
+            <button id="sign-in" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log in</button>
+            <button id="sign-up" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Get started</button>
+          `;
+            }
+
+            $.ajax({
+                url: "http://192.168.137.11:8080/api/getsession",
+                type: "GET",
+                data: {
+                    token: accessToken.split("=")[1],
+                },
+                dataType: "json",
+                success: function (result) {
+                    if (result.userType === "restaurant") {
+                       $.ajax({
+                            url: "http://192.168.137.11:8080/api/getorders",
+                            type: "GET",
+                            dataType: "json",
+                            success: function (result) {
+                                console.log(result);
+                                if (result.length > 0) {
+                                    document.getElementById("place-order").disabled = false;
+                                }
+                            },
+                        });
+                    } else if (result.userType === "user") {
+                        window.location.href = "/dashus.html";
+                    } else {
+                        $.ajax({
+                            url: "http://192.168.137.11:8080/api/getorders",
+                            type: "GET",
+                            dataType: "json",
+                            success: function (result) {
+                                console.log(result);
+                                if (result.length > 0) {
+                                    document.getElementById("place-order").disabled = false;
+                                }
+                            },
+                        });
+                        console.log("User -> Charity/NGO/Community Kitchen");
+                    }
+                },
+                error: function (result) {
+                    Swal.fire({
+                        title: "Error!",
+                        text: "Invalid session",
+                        icon: "error",
+                    });
+                },
+            });
+
+        });
+
+        $(document).on("click", "#log-out", function () {
+            document.cookie =
+                "access_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+            Swal.fire({
+                title: "Logged out",
+                text: "You have been logged out",
+                icon: "success",
+                confirmButtonText: "OK",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "/";
+                }
+            });
+        });
+
+        $(document).on("click", "#sign-in", function () {
+            window.location.href = "/login.html";
+        });
+
+        $(document).on("click", "#sign-up", function () {
+            window.location.href = "/newuser.html";
+        });
+    </script>
+
+    <script src="/assets/dash-main.js"></script>
+    <script src="/assets/dash-add.js" type="text/javascript"></script>
+</body>
+
+</html>
